@@ -7,9 +7,7 @@ output: pdf_document
 
 # Abstract
 
-Intro to the overall topic here
-
-Note: Currently, this code just measures ad-scoring
+Still in development
 
 \newpage
 
