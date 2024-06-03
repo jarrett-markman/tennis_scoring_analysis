@@ -79,9 +79,9 @@ $$\begin{array}{lcl} f(Deuce)-xf(Advantage\ Server) - (1-x)f(Advantage\ Returner
 f(Advantage\ Server) - (1-x)f(Deuce)= x \\
 f(Advantage\ Returner) - xf(Deuce)=0 \end{array}$$
 
-[Click here to visualize this process](fs_analysis.pdf)
+[Click here to visualize this process](Decision%20Tree.png)
 
-[Click here to view results](ggplot.pdf)
+[Click here to view results](Game%20Win%20Probability%20ggplot.pdf)
 
 ### Simulating matches
 
