@@ -93,14 +93,14 @@ With the power of computing and player performance data from [Jeff Sackmann](htt
 - The probability a serve is made.
 - The probability the server wins the point.
 - The probability the returner wins the point.
-- After a serve is made, each point is "simulated" with a while loop that iterates until the server or returner probability returns **true** (wins the point). 
+- After a serve is made, each point is "simulated" with a while loop that iterates until the server or returner probability returns **True** (wins the point). 
 
 **Additionally, this simulation assumes:**
 - Each point is i.i.d (independent, identically, distributed)
 - Player ability is independent of pressure
 - Player distribution is approximately normal if they have $>= 1000$ service points
 - All matchups played are appx. normal
-- All surfaces are independent of each tournament they are played on (e.g. U.S. Open Hard Court versus Australian Open Hard Court is negligible)
+- All surfaces are independent of each tournament they are played on (e.g. U.S. Open hard court versus Australian Open hard court is negligible)
 - Player ability is independent of "form"
 
 ## Results
