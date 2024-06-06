@@ -4,7 +4,7 @@
 
 **Why have the proclaimed "Big 3" been so dominant?**
 
-For Novak Djokovic, Rafael Nadal, and Roger Federer, their main calling card is their prowess in Grand Slams. While they have all found a lot of success on the ATP tour, all with >90 ATP titles, their main claim to dominance is their Grand Slam wins. How could it not be? On the biggest stage, against the best players of the world, they have proven their dominance. This "dominance" is due to the fact that they are the greatest players of their generation. However, in addition to being great players, the best of five scoring system has greatly benefitted all three of them. 
+For Novak Djokovic, Rafael Nadal, and Roger Federer, their main calling card is their prowess in Grand Slams. While they have all found a lot of success on the ATP tour, all with >90 ATP titles, their main claim to dominance is their Grand Slam wins. How could it not be? On the biggest stage, against the best players of the world, they have proven their dominance. This "dominance" is due to the fact that they are the greatest players of their generation. However, in addition to being great players, the best of five scoring system has greatly benefited all three of them. 
 
 - In the 2023 U.S. Open (Currently his last Grand Slam), Novak Djokovic would have lost in the third round to Laslo Djere - 4-6, 4-6. 
 - In the 2011 French Open, Rafael Nadal would have lost in the first round to John Isner - 6-4, 6-7, 6-7.
@@ -89,18 +89,18 @@ With the power of computing and player performance data from [Jeff Sackmann](htt
 
 [Sim code here](sim_code.py)
 
-**The sim I have created takes into account:**
-- The probability a serve is made.
-- The probability the server wins the point.
-- The probability the returner wins the point.
-- After a serve is made, each point is "simulated" with a while loop that iterates until the server or returner probability returns **True** (wins the point). 
+**The simulation I have created takes into account:**
+- The probability a serve is made. 
+- The probability the server wins the point. 
+- The probability the returner wins the point. 
+- After a serve is made, each point is "simulated" with a while loop that iterates until the server or returner probability returns **True** (wins the point).
 
-**Additionally, this simulation assumes:**
-- Each point is i.i.d (independent, identically, distributed)
-- Player ability is independent of pressure
-- Player distribution is approximately normal if they have $>= 1000$ service points
-- All matchups played are appx. normal
-- All surfaces are independent of each tournament they are played on (e.g. U.S. Open hard court versus Australian Open hard court is negligible)
-- Player ability is independent of "form"
-
+**Additionally, this simulation assumes:** 
+- Each point is i.i.d (independent, identically, distributed).
+- Player ability is independent of pressure.
+- Player distribution is approximately normal if they have $>= 1000$ service points.
+- All matches played are based on the players "normal" serve/return ability.
+- All surfaces are independent of each tournament they are played on (e.g. U.S. Open hard court versus Australian Open hard court is negligible).
+- Player ability is independent of "form".
+  
 ## Results
