@@ -6,7 +6,7 @@
 
 For Novak Djokovic, Rafael Nadal, and Roger Federer, their main calling card is their prowess in Grand Slams. While they have all found a lot of success on the ATP tour, all with >90 ATP titles, their main claim to dominance is their Grand Slam wins. How could it not be? On the biggest stage, against the best players of the world, they have proven their dominance. This "dominance" is due to the fact that they are the greatest players of their generation. However, in addition to being great players, the best of five scoring system has greatly benefitted all three of them. 
 
-- In the 2023 U.S. Open (Currently his last Grand Slame), Novak Djokovic would have lost in the third round to Laslo Djere - 4-6, 4-6. 
+- In the 2023 U.S. Open (Currently his last Grand Slam), Novak Djokovic would have lost in the third round to Laslo Djere - 4-6, 4-6. 
 - In the 2011 French Open, Rafael Nadal would have lost in the first round to John Isner - 6-4, 6-7, 6-7.
 - In the 2009 French Open, Roger Federer would have lost in the fourth round to Tommy Haas - 6-7(4), 5-7.
 
