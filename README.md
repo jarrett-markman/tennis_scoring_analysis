@@ -6,15 +6,15 @@
 
 For Novak Djokovic, Rafael Nadal, and Roger Federer, their main calling card is their prowess in Grand Slams. While they have all found a lot of success on the ATP tour, all with >90 ATP titles, their main claim to dominance is their Grand Slam wins. How could it not be? On the biggest stage, against the best players of the world, they have proven their dominance. This "dominance" is due to the fact that they are the greatest players of their generation. However, in addition to being great players, the best of five scoring system has greatly benefited all three of them. 
 
-- In the 2023 U.S. Open (Currently his last Grand Slam), Novak Djokovic would have lost in the third round to Laslo Djere - 4-6, 4-6. 
-- In the 2011 French Open, Rafael Nadal would have lost in the first round to John Isner - 6-4, 6-7, 6-7.
-- In the 2009 French Open, Roger Federer would have lost in the fourth round to Tommy Haas - 6-7(4), 5-7.
+-   In the 2023 U.S. Open (Currently his last Grand Slam), Novak Djokovic would have lost in the third round to Laslo Djere - $(4-6, 4-6)$.
+-   In the 2011 French Open, Rafael Nadal would have lost in the first round to John Isner - $(6-4, 6-7, 6-7)$.
+-   In the 2009 French Open, Roger Federer would have lost in the fourth round to Tommy Haas - $(6-7, 5-7)$.
 
 However, they would all go on win these matches in 5 sets. There are many reasons for this. 
 - It is much harder to sustain a level to beat one of the big 3 for at least 3 sets.
 - On an "off day" there is more time for the better player to reach their highest level.
 
-While there are many other variables to consider in any match (especially a best of five set match), such as timing, fitness, mentality, feeling, and ultimately skill, a large reason for the big 3's success on the grand slam level is that they played 5 sets instead of 3. The Law of Large Numbers says that if you take samples of larger and larger size from any population, then the mean of the sampling distribution, $\mu x$ tends to get closer and closer to the true population mean, $\mu$. The Law of Large Numbers can be applied to these 3 players finding so much success in the best of 5 scoring system. Because the sample is larger, the true distribution in grand slams is much more clear than in other tournaments (ATP 250s, 500s, Masters 1000s). 
+While there are many other variables to consider in any match (especially a best of five set match), such as timing, fitness, mentality, feeling, and ultimately skill, a large reason for the big 3's success on the grand slam level is that they played 5 sets instead of 3. The Law of Large Numbers says that if you take samples of larger and larger size from any population, then the mean of the sampling distribution, $\mu x$ tends to get closer and closer to the true population mean, $\mu$. The Law of Large Numbers can be applied to these 3 players finding so much success in the best of five scoring system. Because the sample is larger, the true distribution in grand slams is much more clear than in other tournaments (ATP 250s, 500s, Masters 1000s). 
 
 How can we measure the effects of different scoring systems in professional tennis? How does deuce-ad and set scoring benefit certain players?
 
@@ -22,7 +22,7 @@ How can we measure the effects of different scoring systems in professional tenn
 
 ### First-Step Analysis
 
-We can solve the probability of a server and a returner winning a deuce game using a Stochastic Process called **First-Step Analysis**. 
+We can solve the probability of a server and a returner winning a deuce-ad game using a Stochastic Process called **First-Step Analysis**. 
 
 A **Markov Chain** is a stochastic model that describes a sequence of possible events in which the probability of each event is based on only the previous state within the chain. 
 
@@ -32,7 +32,7 @@ For this **Markov chain** we have the following state space:
 
 $$\mathbb{S} = \{Deuce,\ Advantage\ Server,\ Advantage\ Returner,\ Game\ Server,\ Game\ Returner\}$$
 
-To calculate the probability of a server (or a returner) winning a deuce game we can apply **First-Step Analysis** with the function:
+To calculate the probability of a server (or a returner) winning a deuce-ad game we can apply **First-Step Analysis** with the function:
 
 $f(x) = P[Server\ Wins\ Deuce\ Game \|\ X(0) = x]\ for\ all\ x\ i.i.d.\ (independent\ and\ identically\ distributed) \in\ \mathbb{S}$
 
