@@ -10,9 +10,10 @@ For Novak Djokovic, Rafael Nadal, and Roger Federer, their main calling card is 
 -   In the 2011 French Open, Rafael Nadal would have lost in the first round to John Isner - $(6-4, 6-7, 6-7)$.
 -   In the 2009 French Open, Roger Federer would have lost in the fourth round to Tommy Haas - $(6-7, 5-7)$.
 
-However, they would all go on win these matches in 5 sets. There are many reasons for this. 
-- It is much harder to sustain a level to beat one of the big 3 for at least 3 sets.
-- On an "off day" there is more time for the better player to reach their highest level.
+However, they would all go on win these matches in five sets. There are many reasons for this:
+- It is much harder to sustain a level to win three out of five sets.
+- A great player is more likely to positively regress to the mean.
+- A worse player is more likely to negatively regress to the mean. 
 
 While there are many other variables to consider in any match (especially a best of five set match), such as timing, fitness, mentality, feeling, and ultimately skill, a large reason for the big 3's success on the grand slam level is that they played 5 sets instead of 3. The Law of Large Numbers says that if you take samples of larger and larger size from any population, then the mean of the sampling distribution, $\mu x$ tends to get closer and closer to the true population mean, $\mu$. The Law of Large Numbers can be applied to these 3 players finding so much success in the best of five scoring system. Because the sample is larger, the true distribution in grand slams is much more clear than in other tournaments (ATP 250s, 500s, Masters 1000s). 
 
