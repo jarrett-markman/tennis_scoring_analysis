@@ -4,12 +4,12 @@ import random
 from ipywidgets import interact_manual, widgets
 from collections import Counter, defaultdict
 # Sim assumes:
-# 1. Each point is i.i.d (independent, identically, distributed)
-# 2. Player ability is independent of pressure
-# 3. Player distribution is accurate if they have >= 1000 service points
-# 4. All matchups played are appx. normal
-# 5. All surfaces are independent of each tournament they are played on
-# 6. Player serve/return ability is independent of "form"
+# 1. Each point is i.i.d (independent, identically, distributed).
+# 2. Player ability is independent of pressure.
+# 3. Player distribution is approximately normal if they have $>= 1000$ service points.
+# 4. All matches played are based on the players "normal" serve/return ability.
+# 5. All surfaces are independent of each tournament they are played on (e.g. U.S. Open hard court versus Australian Open hard court is negligible).
+# 6. Player ability is independent of different factors such as mental and physical state on each point.
 # Function that can read data in for any year
 def read_data(yr): 
     atp_data = pd.read_csv(f"atp_matches_{yr}.csv")
