@@ -272,7 +272,7 @@ def run_simulations(simulations, best_of, surface, scoring, p1, p2):
 atp = df[df['league'] == "ATP"] # Filter out WTA data
 atp_names = atp['name'].drop_duplicates() # Get unique player names
 @interact_manual(
-    # Creatinputs for number of simulations, best of n sets, surface, scoring type, and player
+    # Create inputs for number of simulations, best of n sets, surface, scoring type, and player
     simulations=[1, 10, 50, 100, 500, 1000, 5000, 10000], 
     best_of=[3, 5],
     surface=['Hard', 'Clay', 'Grass'],
