@@ -80,15 +80,9 @@ $$\begin{array}{lcl} f(Deuce)-xf(Advantage\ Server) - (1-x)f(Advantage\ Returner
 f(Advantage\ Server) - (1-x)f(Deuce)= x \\
 f(Advantage\ Returner) - xf(Deuce)=0 \end{array}$$
 
-[Click here to visualize this process](Decision%20Tree.png)
-
-[Click here to view results](Game%20Win%20Probability%20ggplot.pdf)
-
 ### Simulating matches
 
 With the power of computing and player performance data from [Jeff Sackmann](https://github.com/JeffSackmann), we can create a basic simulation for tennis matches accounting for 3 or 5 set matches, as well as ad versus no-ad scoring. 
-
-[Sim code here](sim_code.py)
 
 **The simulation I have created takes into account:**
 - The probability a serve is made. 
