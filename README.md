@@ -32,11 +32,11 @@ A **Markov Chain** is a stochastic model that describes a sequence of possible e
 
 For this **Markov chain** we have the following state space:
 
-$$\mathbb{S} = \{Deuce,\; Advantage\;Server,\; Advantage\;Returner,\; Game\;Server,\; Game\;Returner\}$$
+$$\mathbb{S} = \{Deuce,\ Advantage\Server,\ Advantage\Returner,\ Game\Server,\ Game\Returner\}$$
 
 To calculate the probability of a server or a returner winning a deuce game we can apply **First-Step Analysis** with the function:
 
-$$f(x) = P[Server\; Wins\; Deuce\; Game\;|\;X(0) = x]\; for\; all\; x\in\; \mathbb{S}$$
+$$f(x) = P[Server\ Wins\ Deuce\ Game\|\X(0) = x]\ for\ all\ x\in\ \mathbb{S}$$
 
 In order to calculate the probability of a single point the following assumptions will be made:
 
@@ -45,9 +45,9 @@ In order to calculate the probability of a single point the following assumption
 -   Player performance is independent of pressure
 -   Player ability is independent of pressure and other possible effects
 -   The possible outcomes for winning an individual point are:
-    -   $\mathbb{S} = \{Server,\; Returner\}$
-    -   $P[Server\; Wins\; a\; Point] = x\in[0, 1]$
-    -   $P[Returner\; Wins\; a\; Point] = 1 - P[Server\; Wins\; a\; Point]$
+    -   $\mathbb{S} = \{Server,\ Returner\}$
+    -   $P[Server\ Wins\ a\ Point] = x\in[0, 1]$
+    -   $P[Returner\ Wins\ a\ Point] = 1 - P[Server\ Wins\ a\ Point]$
     -   $\sum_{}\mathbb{S} = 1$
 
 ### In the [**tree diagram**](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/Tree%20Diagram.png) we can visualize this **Markov Chain**.
@@ -60,15 +60,15 @@ With this we can solve the probability of a player winning a game by applying **
 
 #### Note the following absorbing states:
 
-$$f(Game\;Server) = 1$$ $$f(Game\;Returner) = 0$$
+$$f(Game\Server) = 1$$ $$f(Game\Returner) = 0$$
 
 **We are interested in calculating the probability of the server winning**.
 
 We can calculate the likelihood of transferring between states of the Markov chain.
 
-$$f(Deuce) = xf(Advantage\;Server)\;+\;(1-x)f(Advantage\;Returner)$$ $$f(Advantage\;Server) = (1-x)f(Deuce)\;+\;xf(Game\;Server)$$ $$f(Advantage\;Returner) = xf(Deuce)\;+\;(1-x)f(Game\;Returner)$$ We can create a transition matrix with:
+$$f(Deuce) = xf(Advantage\Server)\+\(1-x)f(Advantage\Returner)$$ $$f(Advantage\Server) = (1-x)f(Deuce)\+\xf(Game\Server)$$ $$f(Advantage\Returner) = xf(Deuce)\+\(1-x)f(Game\Returner)$$ We can create a transition matrix with:
 
-$$\mathbb{S} = \{Deuce,\; Advantage\;Server,\; Advantage\;Returner,\; Game\;Server,\; Game\;Returner\}$$
+$$\mathbb{S} = \{Deuce,\ Advantage\Server,\ Advantage\Returner,\ Game\Server,\ Game\Returner\}$$
 
 in that order.
 
@@ -82,9 +82,9 @@ x & 0 & 0 & 0 & 1-x\\
 
 **More importantly**, we can calculate the probability of both players winning a game for any point win probability with the following system of equations:
 
-$$\begin{array}{lcl} f(Deuce)-xf(Advantage\;Server) - (1-x)f(Advantage\;Returner)=0\\ 
-f(Advantage\;Server) - (1-x)f(Deuce)= x \\
-f(Advantage\;Returner) - xf(Deuce)=0 \end{array}$$
+$$\begin{array}{lcl} f(Deuce)-xf(Advantage\Server) - (1-x)f(Advantage\Returner)=0\\ 
+f(Advantage\Server) - (1-x)f(Deuce)= x \\
+f(Advantage\Returner) - xf(Deuce)=0 \end{array}$$
 
 ### We can visualize the [results](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/Game%20WP%20by%20Scoring.png) of the system of equations for the probability of winning one deuce point, and the probability of winning a game with deuce-ad scoring given the point win probability of "x" for the server.
 
@@ -121,7 +121,7 @@ Following the simulation, the results revealed several key findings. [**Figure 3
 
 We can additionally measure the affects in variance by aggregating player results in terms of their expected match win percentage (average grand slam match win percentage) and measure the difference of their empirical match win percentage (win percentage based on all matches). In [**figure 4**](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/WTA%20Boxplot.png) and [**figure 5**](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/ATP%20Boxplot.png) we can see boxplots in women's and men's matches. While [**figure 3**](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/Accuracy%20by%20Scoring%20System.png) displays no-ad scoring as more accurate, deuce-ad scoring limits variance in both women's and men's tennis, for 3 and 5 sets respectively. The variance is much higher in all scoring systems not true to the same situations as grand slams, and the difference in expected versus actual win percentage in matches is much less variant in 3-set (ad) matches for women, and 5-set (ad) matches for men. This is largely due to two factors. On the men's side, it's unsurprising to see that variance is limited in 5-set and deuce-ad scoring, because the security of another set to win, and a scoring system that favors all of their service games. However, it is surprising that in all women's matches, variance is minimized in best of 3, deuce-ad scoring matches, as the more sets the players play, should favor the "better" player. Additionally, being that given grand slam matches are defined as 3-set and 5-set, deuce-ad scoring matches, over a large sample of $1,000,000$ matches, variance should be limited in the matches that replicate the same conditions, which is why matches appear to be less more variant in the same scoring systems as grand slams.
 
-In [**figure 6**](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/WTA%20Variance%20Bar%20Chart.png) and [**figure 7**](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/ATP%20Variance%20Bar%20Chart.png), we can see bar charts that display the variance for women's and men's tennis by scoring system. This additionally contributes to the analysis that variance appears to be minimized in grand slam conditions. It is interesting to see that in both women's and men's matches, variance is at its highest in best of five, no-ad scoring matches. It's possible that given the match is longer, and the "better" player in service games (assuming that a player has $>\;.62$ win probability on a given service point) loses service games more frequently meaning that service games are much harder to win, so breaks of service will be much more common.
+In [**figure 6**](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/WTA%20Variance%20Bar%20Chart.png) and [**figure 7**](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/ATP%20Variance%20Bar%20Chart.png), we can see bar charts that display the variance for women's and men's tennis by scoring system. This additionally contributes to the analysis that variance appears to be minimized in grand slam conditions. It is interesting to see that in both women's and men's matches, variance is at its highest in best of five, no-ad scoring matches. It's possible that given the match is longer, and the "better" player in service games (assuming that a player has $>\.62$ win probability on a given service point) loses service games more frequently meaning that service games are much harder to win, so breaks of service will be much more common.
 
 The tables in [**Figure 8**](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/WTA%20Table.png) and [**figure 9**](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/ATP%20Table.png) display the top women's and men's players in terms of their overall win percentage in all of their matches. You can additionally see their total number of matches, and win probability by each scoring system.
 
