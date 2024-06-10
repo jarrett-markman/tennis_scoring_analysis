@@ -32,11 +32,11 @@ A **Markov Chain** is a stochastic model that describes a sequence of possible e
 
 For this **Markov chain** we have the following state space:
 
-$$\mathbb{S} = \{Deuce,\ Advantage\Server,\ Advantage\Returner,\ Game\Server,\ Game\Returner\}$$
+$$\mathbb{S} = \{Deuce,\ Advantage\ Server,\ Advantage\ Returner,\ Game\ Server,\ Game\ Returner\}$$
 
 To calculate the probability of a server or a returner winning a deuce game we can apply **First-Step Analysis** with the function:
 
-$$f(x) = P[Server\ Wins\ Deuce\ Game\|\X(0) = x]\ for\ all\ x\in\ \mathbb{S}$$
+$$f(x) = P[Server\ Wins\ Deuce\ Game\ |\ X(0) = x]\ for\ all\ x\ in\ \mathbb{S}$$
 
 In order to calculate the probability of a single point the following assumptions will be made:
 
@@ -46,7 +46,7 @@ In order to calculate the probability of a single point the following assumption
 -   Player ability is independent of pressure and other possible effects
 -   The possible outcomes for winning an individual point are:
     -   $\mathbb{S} = \{Server,\ Returner\}$
-    -   $P[Server\ Wins\ a\ Point] = x\in[0, 1]$
+    -   $P[Server\ Wins\ a\ Point] = x\ in[0, 1]$
     -   $P[Returner\ Wins\ a\ Point] = 1 - P[Server\ Wins\ a\ Point]$
     -   $\sum_{}\mathbb{S} = 1$
 
@@ -60,15 +60,15 @@ With this we can solve the probability of a player winning a game by applying **
 
 #### Note the following absorbing states:
 
-$$f(Game\Server) = 1$$ $$f(Game\Returner) = 0$$
+$$f(Game\ Server) = 1$$ $$f(Game\ Returner) = 0$$
 
 **We are interested in calculating the probability of the server winning**.
 
 We can calculate the likelihood of transferring between states of the Markov chain.
 
-$$f(Deuce) = xf(Advantage\Server)\+\(1-x)f(Advantage\Returner)$$ $$f(Advantage\Server) = (1-x)f(Deuce)\+\xf(Game\Server)$$ $$f(Advantage\Returner) = xf(Deuce)\+\(1-x)f(Game\Returner)$$ We can create a transition matrix with:
+$$f(Deuce) = xf(Advantage\ Server)\ +\ (1-x)f(Advantage\ Returner)$$ $$f(Advantage\ Server) = (1-x)f(Deuce)\ +\ xf(Game\ Server)$$ $$f(Advantage\ Returner) = xf(Deuce)\ +\ (1-x)f(Game\ Returner)$$ We can create a transition matrix with:
 
-$$\mathbb{S} = \{Deuce,\ Advantage\Server,\ Advantage\Returner,\ Game\Server,\ Game\Returner\}$$
+$$\mathbb{S} = \{Deuce,\ Advantage\ Server,\ Advantage\ Returner,\ Game\ Server,\ Game\ Returner\}$$
 
 in that order.
 
@@ -82,9 +82,9 @@ x & 0 & 0 & 0 & 1-x\\
 
 **More importantly**, we can calculate the probability of both players winning a game for any point win probability with the following system of equations:
 
-$$\begin{array}{lcl} f(Deuce)-xf(Advantage\Server) - (1-x)f(Advantage\Returner)=0\\ 
-f(Advantage\Server) - (1-x)f(Deuce)= x \\
-f(Advantage\Returner) - xf(Deuce)=0 \end{array}$$
+$$\begin{array}{lcl} f(Deuce)-xf(Advantage\ Server) - (1-x)f(Advantage\ Returner)=0\\ 
+f(Advantage\ Server) - (1-x)f(Deuce)= x \\
+f(Advantage\ Returner) - xf(Deuce)=0 \end{array}$$
 
 ### We can visualize the [results](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/Game%20WP%20by%20Scoring.png) of the system of equations for the probability of winning one deuce point, and the probability of winning a game with deuce-ad scoring given the point win probability of "x" for the server.
 
