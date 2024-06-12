@@ -2,7 +2,6 @@ import pandas as pd
 import streamlit as st
 import numpy as np
 import random
-from ipywidgets import interact_manual, widgets
 from collections import Counter, defaultdict
 def read_data(yr): 
     atp_data = pd.read_csv(f"atp_matches_{yr}.csv")
