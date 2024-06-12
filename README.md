@@ -126,16 +126,16 @@ After creating a match simulation, the next step was to generate a list of $1,00
 
 # Results
 
-- [Figure 1 - Tree diagram for deuce-ad scoring](#https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/Tree%20Diagram.png)
--   [Figure 2 - Game win probability plot for service game win percentage for a server in a deuce game](#https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/Game%20WP%20by%20Scoring.png))
--   [Figure 3 - Simulation "accuracy" by scoring system](#https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/Accuracy%20by%20Scoring%20System.png)
--   [Figure 4 - WTA boxplot by scoring system](#https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/WTA%20Boxplot.png)
--   [Figure 5 - ATP boxplot by scoring system](#https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/ATP%20Boxplot.png)
--   [Figure 6 - WTA barplot of variance by scoring system](#https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/ATP%20Variance%20Bar%20Chart.png)
--   [Figure 7 - ATP barplot of variance by scoring system](#https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/ATP%20Variance%20Bar%20Chart.png)
--   [Figure 8 - Top 20 WTA players](#https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/WTA%20Table.png)
--   [Figure 9 - Top 20 ATP players](#https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/ATP%20Table.png)
+- [Figure 1 - Tree diagram for deuce-ad scoring](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/Tree%20Diagram.png)
+-   [Figure 2 - Game win probability plot for service game win percentage for a server in a deuce game](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/Game%20WP%20by%20Scoring.png))
+-   [Figure 3 - Simulation "accuracy" by scoring system](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/Accuracy%20by%20Scoring%20System.png)
+-   [Figure 4 - WTA boxplot by scoring system](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/WTA%20Boxplot.png)
+-   [Figure 5 - ATP boxplot by scoring system](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/ATP%20Boxplot.png)
+-   [Figure 6 - WTA barplot of variance by scoring system](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/ATP%20Variance%20Bar%20Chart.png)
+-   [Figure 7 - ATP barplot of variance by scoring system](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/ATP%20Variance%20Bar%20Chart.png)
+-   [Figure 8 - Top 20 WTA players](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/WTA%20Table.png)
+-   [Figure 9 - Top 20 ATP players](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/ATP%20Table.png)
 
-# References {#p6}
+# References 
 
 All player performance data is sourced from [**Jeff Sackmann's GitHub**](https://github.com/JeffSackmann).
