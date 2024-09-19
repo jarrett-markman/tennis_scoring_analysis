@@ -170,7 +170,7 @@ def sim_tb(server, p1_fs_in, p1_fs_win, p1_ss_in, p1_ss_win, p1_fr_win, p1_sr_wi
             break
         
         # Alternate server every two points
-        if (p1_points + p2_points) % 2 == 0:
+        if (p1_points + p2_points) % 2 != 0:
             current_server = 'p1' if current_server == 'p2' else 'p2'
     
     # Return the winner of the tiebreaker
