@@ -70,36 +70,6 @@ calculate_system <- function(x) {
     stop("Invalid input. Please provide values within the range of 0 and 1")
   }
 }
-# Create a data frame to store results
-res <- data.frame(serve_win_prob = 1:100/100, prob = NA) %>%
-  mutate(x_axis = serve_win_prob)
-# Apply the calculate_system function to each serve_win_prob value
-res$prob <- map_dbl(res$serve_win_prob, calculate_system)
-# Find the point of intersection 
-intersection_point <- res %>% arrange(desc(prob)) %>% tail(-1) %>% 
-  mutate(min = abs(serve_win_prob-prob)) %>%
-  arrange(min) %>% select(1) %>% head(1)[1]
-# Plot the results
-plot <- ggplot(res, aes(x = serve_win_prob)) +
-  # Add in lines for each gm wp
-  geom_line(aes(y = serve_win_prob, color = "Game Win Probability (no-ad)")) +
-  geom_line(aes(y = prob, color = "Game Win Probability (ad)")) +
-  # Add an intersecting line
-  geom_hline(yintercept = intersection_point, linetype = "dashed", color = "black") +
- # Set graph label (inflection point)
-  annotate("text", x = .25, y = .75, 
-           label = glue::glue("Above this point of intersection, ad-scoring favors the server"), 
-           vjust = -0.5, size = 2) +
-  geom_segment(aes(x = intersection_point, y = intersection_point,
-                   xend = .25, yend = .75), color = "black") +
-  # Change plot elements
-  labs(title = "Game Win Probabilities by Scoring System", 
-       x = "Serve Win Probability", y = "Probability",
-       color = "", caption = "Jarrett Markman") +
-  theme_bw() +
-  theme(plot.title = element_text(size = 12, face = "bold", hjust = 0.5),
-        legend.position = "top")
 # Save visuals
-ggsave("Game WP by Scoring.png", plot)
 export_graph(graph, file_name = "Tree Diagram.svg", file_type = "svg")
 webshot(url = "file:///Users/HMarkman/Desktop/Projects/tennis_projects/simulation_project/Tree%20Diagram.svg", file = "Tree Diagram.png")
