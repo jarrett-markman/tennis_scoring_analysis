@@ -3,6 +3,13 @@ import streamlit as st
 import numpy as np
 import random
 from collections import Counter, defaultdict
+# Sim assumes:
+# 1. Each point is i.i.d (independent, identically, distributed).
+# 2. Player ability is independent of pressure.
+# 3. Player distribution is approximately normal if they have $>= 1000$ service points.
+# 4. All matches played are based on the players "normal" serve/return ability.
+# 5. All surfaces are independent of each tournament they are played on (e.g. U.S. Open hard court versus Australian Open hard court is negligible).
+# 6. Player ability is independent of different factors such as mental and physical state on each point.
 def read_data(yr): 
     atp_data = pd.read_csv(f"atp_matches_{yr}.csv")
     atp_data['league'] = "ATP" 
