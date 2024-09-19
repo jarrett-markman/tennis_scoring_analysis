@@ -59,7 +59,7 @@ In order to calculate the probability of a single point the following assumption
     -   $P[Returner\ Wins\ a\ Point] = 1 - P[Server\ Wins\ a\ Point]$
     -   $\sum_{}\mathbb{S} = 1$
 
-### In the [**tree diagram**](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/Tree%20Diagram.png) we can visualize this **Markov Chain**.
+### In the [**tree diagram**](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/Markov%20Chain.png) we can visualize this **Markov Chain**.
 
 Where x represents the likelihood of the server winning a point and 1 - x represents the likelihood of the returner winning a point.
 
