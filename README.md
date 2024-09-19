@@ -95,8 +95,6 @@ $$\begin{array}{lcl} f(Deuce)-xf(Advantage\ Server) - (1-x)f(Advantage\ Returner
 f(Advantage\ Server) - (1-x)f(Deuce)= x \\
 f(Advantage\ Returner) - xf(Deuce)=0 \end{array}$$
 
-### We can visualize the [results](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/Game%20WP%20by%20Scoring.png) of the system of equations for the probability of winning one deuce point, and the probability of winning a game with deuce-ad scoring given the point win probability of "x" for the server.
-
 ## Simulation Process
 
 With the power of computing and player performance data from [**Jeff Sackmann**](https://github.com/JeffSackmann), we can create a basic simulation for tennis matches accounting for 3 or 5 set matches, and incorporate a one point deuce,
@@ -123,18 +121,6 @@ With the power of computing and player performance data from [**Jeff Sackmann**]
 -   Player ability is independent of different factors such as mental and physical state on each point.
 
 After creating a match simulation, the next step was to generate a list of $1,000,000$ men's and $1,000,000$ women's matches with randomly selected inputs (player, scoring, number of sets, and surface). Players were chosen randomly from a data frame containing all player statistics. Scoring was split $80/20$, the number of sets was split $60/40$, and surface types were split $56/33/11$ to accurately represent the overall ATP season. In addition to predicting $2,000,000$ total individual matches, I decided to additionally simulate all matches 100 times with the same conditions as a grand slam (deuce-ad scoring, best of 3/5 for women/men), to have some measure for the expected winner.
-
-# Results
-
-- [Figure 1 - Tree diagram for deuce-ad scoring](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/Tree%20Diagram.png)
--   [Figure 2 - Game win probability plot for service game win percentage for a server in a deuce game](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/Game%20WP%20by%20Scoring.png))
--   [Figure 3 - Simulation "accuracy" by scoring system](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/Accuracy%20by%20Scoring%20System.png)
--   [Figure 4 - WTA boxplot by scoring system](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/WTA%20Boxplot.png)
--   [Figure 5 - ATP boxplot by scoring system](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/ATP%20Boxplot.png)
--   [Figure 6 - WTA barplot of variance by scoring system](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/ATP%20Variance%20Bar%20Chart.png)
--   [Figure 7 - ATP barplot of variance by scoring system](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/ATP%20Variance%20Bar%20Chart.png)
--   [Figure 8 - Top 20 WTA players](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/WTA%20Table.png)
--   [Figure 9 - Top 20 ATP players](https://github.com/jarrett-markman/tennis_scoring_analysis/blob/main/viz/ATP%20Table.png)
 
 # References 
 
