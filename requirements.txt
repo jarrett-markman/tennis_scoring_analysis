@@ -1,0 +1,6 @@
+pandas
+streamlit
+numpy
+random
+Counter
+defaultdict
