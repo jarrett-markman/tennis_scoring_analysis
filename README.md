@@ -49,10 +49,9 @@ $$f(x) = P[Server\ Wins\ Deuce\ Game\ |\ X(0) = x]\ for\ all\ x\ in\ \mathbb{S}$
 
 In order to calculate the probability of a single point the following assumptions will be made:
 
--   Each point is i.i.d (independent and identically distributed)
+-   Each point is i.i.d (independent and identically distributed) and has no effect on all other points
 -   The past does not matter (how the game got to deuce)
 -   Player performance is independent of pressure
--   Player ability is independent of pressure and other possible effects
 -   The possible outcomes for winning an individual point are:
     -   $\mathbb{S} = \{Server,\ Returner\}$
     -   $P[Server\ Wins\ a\ Point] = x\ in[0, 1]$
