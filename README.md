@@ -94,6 +94,14 @@ $$\begin{array}{lcl} f(Deuce)-xf(Advantage\ Server) - (1-x)f(Advantage\ Returner
 f(Advantage\ Server) - (1-x)f(Deuce)= x \\
 f(Advantage\ Returner) - xf(Deuce)=0 \end{array}$$
 
+If you are interested in applying this system of equations, follow this [link](https://www.wolframalpha.com/input?i=system+equation+calculator&assumption=%7B%22F%22%2C+%22SolveSystemOf4EquationsCalculator%22%2C+%22equation1%22%7D+-%3E%22x+%2B+.75y+%2B+.25z+%3D+0%22&assumption=%22FSelect%22+-%3E+%7B%7B%22SolveSystemOf4EquationsCalculator%22%7D%2C+%22dflt%22%7D&assumption=%7B%22F%22%2C+%22SolveSystemOf4EquationsCalculator%22%2C+%22equation2%22%7D+-%3E%22.25x+%2B+y+%3D+.75%22&assumption=%7B%22F%22%2C+%22SolveSystemOf4EquationsCalculator%22%2C+%22equation3%22%7D+-%3E%22.75x+%2B+z+%3D+0%22&assumption=%7B%22F%22%2C+%22SolveSystemOf4EquationsCalculator%22%2C+%22equation4%22%7D+-%3E%22a+%2B+x+%3D+0%22)! **(Assumes that $P[Server\ Wins\ a\ Point] = 0.75$ and $P[Returner\ Wins\ a\ Point] = 0.25$)**
+
+
+- **Assume that "x" represents "f(Deuce)"**
+- **Assume that "y" represents "f(Advantage Server)"**
+- **Assume that "z" represents "f(Advantage Returner)"**
+- **"a" represents a "start" state that will calculate: $$f(start) = P[Server\ Wins\ Deuce\ Game\ |\ X(0) = start]$$**
+
 ## Simulation Process
 
 With the power of computing and player performance data from [**Jeff Sackmann**](https://github.com/JeffSackmann), we can create a basic simulation for tennis matches accounting for 3 or 5 set matches, and incorporate a one point deuce,
