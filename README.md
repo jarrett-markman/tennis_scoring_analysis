@@ -119,8 +119,6 @@ With the power of computing and player performance data from [**Jeff Sackmann**]
 -   All surfaces are independent of each tournament they are played on (e.g. U.S. Open hard court versus Australian Open hard court is negligible).
 -   Player ability is independent of different factors such as mental and physical state on each point.
 
-After creating a match simulation, the next step was to generate a list of $1,000,000$ men's and $1,000,000$ women's matches with randomly selected inputs (player, scoring, number of sets, and surface). Players were chosen randomly from a data frame containing all player statistics. Scoring was split $80/20$, the number of sets was split $60/40$, and surface types were split $56/33/11$ to accurately represent the overall ATP season. In addition to predicting $2,000,000$ total individual matches, I decided to additionally simulate all matches 100 times with the same conditions as a grand slam (deuce-ad scoring, best of 3/5 for women/men), to have some measure for the expected winner.
-
 # References 
 
 All player performance data is sourced from [**Jeff Sackmann's GitHub**](https://github.com/JeffSackmann).
