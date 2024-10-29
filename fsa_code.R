@@ -47,29 +47,6 @@ graph <- create_graph() %>%
   clear_selection() 
 # Display graph
 render_graph(graph, width = 750, height = 300)
-# Calculate probability of winning a deuce-ad game for any given point win probability of server and returner x and 1-x
-# Define the function
-calculate_system <- function(x) {
-  # Check if all elements of x are within the range [0, 1]
-  if (all(x >= 0) && all(x <= 1)) {
-    # Calculate y based on the relation y = 1 - x
-    y <- 1 - x
-    
-    # Coefficients matrix
-    A <- matrix(c(1, -x, -y, 0, 1, -y, -x, 0, 1), nrow = 3, byrow = TRUE)
-    
-    # Constants vector
-    B <- c(0, x, 0)
-    
-    # Solve the system
-    solution <- solve(A, B)
-    
-    # Return the solution for f(deuce)
-    return(solution[1])
-  } else {
-    stop("Invalid input. Please provide values within the range of 0 and 1")
-  }
-}
 # Save visuals
 export_graph(graph, file_name = "Tree Diagram.svg", file_type = "svg")
-webshot(url = "file:///Users/HMarkman/Desktop/Projects/tennis_projects/simulation_project/Tree%20Diagram.svg", file = "Tree Diagram.png")
+webshot(url = "url", file = "Tree Diagram.png")
