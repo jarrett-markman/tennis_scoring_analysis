@@ -74,7 +74,9 @@ $$f(Game\ Server) = 1$$ $$f(Game\ Returner) = 0$$
 
 We can calculate the likelihood of transferring between states of the Markov chain.
 
-$$f(Deuce) = xf(Advantage\ Server)\ +\ (1-x)f(Advantage\ Returner)$$ $$f(Advantage\ Server) = (1-x)f(Deuce)\ +\ xf(Game\ Server)$$ $$f(Advantage\ Returner) = xf(Deuce)\ +\ (1-x)f(Game\ Returner)$$ We can create a transition matrix with:
+$$f(Deuce) = xf(Advantage\ Server)\ +\ (1-x)f(Advantage\ Returner)$$ $$f(Advantage\ Server) = (1-x)f(Deuce)\ +\ xf(Game\ Server)$$ $$f(Advantage\ Returner) = xf(Deuce)\ +\ (1-x)f(Game\ Returner)$$ 
+
+We can create a transition matrix with:
 
 $$\mathbb{S} = \{Deuce,\ Advantage\ Server,\ Advantage\ Returner,\ Game\ Server,\ Game\ Returner\}$$
 
